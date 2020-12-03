@@ -8,7 +8,7 @@ const morgan = require("morgan");
 const routes = require("./routes");
 const passport = require("./passport");
 
-const port = process.env.API_PORT || 5000;
+const port = process.env.PORT || 5000;
 const app = express();
 
 // middleware - server logging
