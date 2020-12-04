@@ -16,7 +16,6 @@ const strategy = new LocalStrategy(
         }
       })
       .then(foundUser => {
-        console.log("heyyy");
         // no user is found
         if (!foundUser) {
           return done(null, false, { message: "Invalid Credentials" });
@@ -26,8 +25,6 @@ const strategy = new LocalStrategy(
         if (!foundUser.validPassword(password)) {
           return done(null, false, { message: "Invalid Credentials" });
         }
-
-        console.log("hwwwww");
 
         return done(null, foundUser);
       })
