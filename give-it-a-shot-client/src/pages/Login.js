@@ -18,10 +18,12 @@ const Login = props => {
   let handleSubmit = event => {
     event.preventDefault();
 
-    UserApi.login({
+    const loginObj = {
       email,
       password
-    })
+    };
+
+    UserApi.login(loginObj)
       .then(data => {
         if (!data.user) {
           console.log("Login Unsuccessful");
@@ -30,7 +32,7 @@ const Login = props => {
         // storeUser is defined in the app component and passed to Login
         props.storeUser(data.user);
       })
-      .catch(err => console.log("Login Error", err));
+      .catch(err => console.log("Login Error for: ", loginObj, err));
   };
 
   // if user is logged in, redirect
