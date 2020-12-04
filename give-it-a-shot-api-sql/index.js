@@ -34,7 +34,7 @@ app.use(cors(corsOptions));
 app.use(
   session({
     // session is stored in the DB
-    secret: "wjfknewuisfhjewosfhenwuyjawrhedi3eq",
+    secret: process.env.SECRET,
     resave: false, // will not resave sessions
     saveUninitialized: false, // only create a session when a property is added to the session
     cookie: {

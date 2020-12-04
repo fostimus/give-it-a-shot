@@ -1,6 +1,7 @@
 const db = require("../models");
 
 const login = (req, res) => {
+  console.log("In Login Controller:   ", req.user);
   res.json({ user: req.user.id });
 };
 
