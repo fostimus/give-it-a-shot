@@ -26,7 +26,6 @@ const strategy = new LocalStrategy(
           return done(null, false, { message: "Invalid Credentials" });
         }
 
-        console.log("In LocalStrategy.js   ", foundUser);
         return done(null, foundUser);
       })
       .catch(err => {
