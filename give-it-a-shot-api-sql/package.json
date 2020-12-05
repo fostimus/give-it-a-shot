@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js",
+    "start": "sequelize db:seed --seed seeders/20201118201018-image-seeder.js && nodemon index.js",
     "publishheroku": "cd ../ && git subtree push --prefix give-it-a-shot-api-sql give-it-a-shot-api-sql main || true"
   },
   "keywords": [],
